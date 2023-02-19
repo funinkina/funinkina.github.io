@@ -1,8 +1,20 @@
 body{
-    /*background-image: url(https://i.imgur.com/oDFTKLJ.jpg);*/
-    background-image: url(https://imgur.com/RaFgqec.jpg);
-    background-repeat: no-repeat;
-    background-size: 1920px 1050px;
+    background-color: #fffaf4;
+    background-image: url(https://i.imgur.com/FRQ6CF1.png), url(https://i.imgur.com/sdiI9rS.png);
+    background-size: 60%, 55%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top 300px, right top;
+    background-attachment:fixed ;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+    border-radius: 10px;
+    margin: auto;
+    height: 2px;
+    width: 85%;
+    color: black;
+    background-color: black;
 }
 ul{
     display: flex;
@@ -15,24 +27,35 @@ ul{
 }
 
 ul:visited{
+    text-decoration: black;
     color: black;
 }
 
 li:visited{
-    text-decoration: none;
+    text-decoration: black;
     color: black;
 }
 #list:hover{text-decoration: none; 
-    background-color: #dbc7c1;
+    background-color: #ffe2ca;
 }
-
+#list{
+    border: 2px solid black;
+    background-color: #e0eff1;
+    border-radius: 70px;
+    padding: 10px;
+    padding-left: 0.7%;
+    padding-right: 0.7%;
+    font-weight: 300;
+    text-decoration: none;
+}
 
 li{
     list-style: none;
 }
 img.rounded{
-    margin: 50px;
-    margin-left: 250px;
+    margin-top: 3%;
+    margin-left: 13%;
+    float: left;
     border-radius: 50%;
     border: 3px solid black;
     float: left;
@@ -41,43 +64,81 @@ img.logos{
     float: left;
     padding-right: 10px;
 }
-#list{
-    border: 2px solid black;
-    background-color: #efe6e1;
-    border-radius: 70px;
-    padding: 10px;
-    padding-left: 0.7%;
-    padding-right: 0.7%;
-    font-weight: s00;
-    text-decoration: none;
-}
+
 #about{
-    padding-top: 3.4%;
+    padding-top: 3%;
     display: flex;
+    padding-left: 50px;
 }
-hr{
-    border-radius: 5px 5px 5px 5px;
-    margin: auto;
-    height: 2px;
-    width: 85%;
-    background-color: black;
-}
+
 div.inner{
-    background-color: #efe6e1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    height: 350px;
+    background-color: #fdf1e1;
     border-radius: 50px;
     border: 3px solid black;
-    margin: 0px;
-    padding: 5px 25px;
+    padding: 0px 20px;
 }
-p.maininfo{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+#maininfo{
     font-size: 210%;
     font-weight: 500;
 }
-p.subinfo{
-    margin: 3px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+#subinfo{
+    margin: auto;
     font-size: 190%;
     font-weight: 300;
-    padding-bottom: 30px;
+}
+
+/*skills section*/
+
+div.skill{
+    justify-content: right;
+    display: flex;
+    padding-left: 10%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-right: 15%;
+}
+
+ #skillogos{
+    float: left;
+    place-items: center;
+    height: auto;
+    width: auto;
+    border-radius: 50px;
+    background-color: #e0eff1;
+    border: 3px solid black;
+    margin-right: 40px;
+}
+
+ul.skillist{
+    width: auto;
+    display: grid;
+    grid: auto / auto auto;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: span 2;
+    gap: 35px 60px;
+    place-items: center;
+    align-items: center;
+}
+li.skillist{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 150%;
+    font-weight: 300;
+    text-anchor: middle;
+    list-style: none;
+}
+div.sktext{
+    position: relative;
+    writing-mode: vertical-lr;
+    right: 0;
+    top: 0;
+    text-align: center;
+    border: 3px solid black;
+    background-color: #e0eff1;
+    border-radius: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 300%;
+    font-weight: 500;
 }

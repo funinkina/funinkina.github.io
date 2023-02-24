@@ -1,162 +1,144 @@
-body{
-    background-color: #ffffff;
-    justify-content: center;
-    align-items: center;
+@font-face {
+    font-family: "DM-mono";
+    src: url(DMMono-Regular.ttf);
 }
-hr{
-    justify-self: center;
+@font-face {
+    font-family: "DM-mono-bold";
+    src: url(DMMono-Medium.ttf);
+}
+div.header {
+    display: flex;
     justify-content: center;
-    border-radius: 10px;
-    height: 2px;
-    width: 70%;
-    color: black;
+    align-items: flex-start;
+    font-family: "DM-mono-bold";
+    font-size: 7vw;
+    position: static;
+    line-height: 0vi;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+hr {
+    height: 0.3vmin;
     background-color: black;
 }
-ul{
+
+ul {
+    list-style-type: none;
+    display: flex;
+    font-family: "DM-mono";
     justify-content: center;
-    align-items: center;
-    display: flex;
-    padding-top: 5px;
-    justify-content: space-evenly;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 22px;
+    font-size: 1.5vmax;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
-ul:visited{
-    text-decoration: black;
-    color: black;
-}
-
-#tlist{
-    margin-left: 10%;
-    margin-right: 12%;
-}
-
-li:visited{
-    text-decoration: black;
-    color: black;
-}
-#list:hover{text-decoration: none; 
-    background-color: #c8e1cc;
-}
-#list{
-    border: 2px solid black;
-    background-color: #d2e7d6;
-    border-radius: 0px;
-    padding: 10px;
-    padding-left: 1%;
-    padding-right: 1%;
-    font-weight: 300;
-    text-decoration: none;
-}
-
-li{
-    list-style: none;
-}
-img.rounded{
-    margin-top: 4.39%;
-    margin-left: 15%;
-    float: left;
-    border-radius: 0%;
-    border: 3px solid black;
-    float: left;
-}
-img.logos{
-    float: left;
-    padding-right: 10px;
-}
-
-#about{
-    padding-top: 3%;
-    display: flex;
-    padding-left: 5px;
-}
-
-div.inner{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    height: 350px;
-    background-color: #d2e7d6;
-    height: auto;
-    border: 3px solid black;
-    margin-top: 2%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-}
-#maininfo{
-    font-size: 210%;
-    font-weight: 500;
-}
-
-#subinfo{
-    margin: auto;
-    font-size: 190%;
-    font-weight: 300;
-    padding-bottom: 3%;
-}
-
-/*skills section*/
-
-div.skill{
-    justify-content: center;
-    display: flex;
-    margin-top: 3%;
+li {
+    margin-top: 1vmax;
+    margin-bottom: 1vmax;
     margin-left: 3%;
-}
-
- #skillogos{
-    align-items: center;
-    justify-content: center;
-    float: left;
-    background-color: #d2e7d6;
-    border: 3px solid black;
-    margin-right: 5px;
-}
-
-ul.skillist{
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 375px 375px 375px;
-    row-gap: 15%;
-    padding-top: 1%;
-    padding-bottom: 4%;
-}
-li.skillist{
-    justify-content: center;
-    align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 150%;
-    font-weight: 300;
-    text-anchor: middle;
-    list-style: none;
-}
-div.sktext{
-    position: relative;
-    writing-mode: vertical-lr;
-    right: 0;
-    top: 0;
-    text-align: center;
-    border: 3px solid black;
-    background-color: #b8d8be;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 300%;
-    font-weight: 370;
     margin-right: 3%;
 }
-footer{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 5;
-    text-align: center;
-    border: 2px solid black;
-    margin-top: 5%;
-    margin-left: 43%;
-    margin-right: 43%;
-    margin-bottom: 5%;
-    align-items: center;
+img{
+    border: 0.5vmin solid black;
+    margin-left: 5vmax;
+    width: 25vw;
+    height: auto;
+    margin-right: 0;
+}
+div.about{
+    align-items: stretch;
     display: flexbox;
-    background-color: #b8d8be;
     justify-content: center;
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-gap: 0;    
+}
+
+div.image{
+    grid-column: 1 / 2;
+}
+div.abme{
+    display:inline-flex;
+    text-align: justify;
+    align-items: center;
+    border-top: 0.5vmin solid black;
+    border-bottom: 0.5vmin solid black;
+    border-right: 0.5vmin solid black;
+    width: 60vw;
+    height: 25vw;
+    font-family: "DM-mono";
+    font-size: calc(20px + 0.390625vh);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    grid-column: 2 / -1;
+    margin-right: 5vmax;
+    margin-left: 0;
+}
+@media (max-width: 768px) {
+    ul {
+        display: list-item;
+        font-family: "DM-mono";
+        justify-content: center;
+        font-size: 2.5vmax;
+    }
+    li{
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        margin: 3vh;
+    }
+    img{
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        justify-content: center;
+        border: 0.5vmin solid black;
+        width: 84vw;
+        height: auto;
+        margin-right: 5vmin;
+        margin-left: 5vmin;
+        margin-bottom: 0;
+    }
+    div.about {
+        display: flexbox;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 0;
+    }
+    div.image {
+        grid-column: 1 / -1;
+    }
+    div.abme {
+        align-items: center;
+        grid-column: 1 / -1;
+        border-bottom: 0.5vmin solid black;
+        border-right: 0.5vmin solid black;
+        border-left: 0.5vmin solid black;
+        border-top: 0;
+        width: 80vw;
+        height: auto;
+        font-size: calc(14px + 0.390625vw);
+        margin-right: 5vmin;
+        margin-left: 5vmin;
+        margin-top: -2%;
+    }
+}
+
+@media (max-width: 1280px){
+    div.abme{
+        font-size: calc(15px + 0.390625vh);
+    }
+}
+
+@media (max-width: 990px){
+    div.abme{
+        font-size: calc(12px + 0.390625vh);
+    }
 }

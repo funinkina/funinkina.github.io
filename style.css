@@ -1,16 +1,23 @@
 @font-face {
-    font-family: "DM-mono";
-    src: url(DMMono-Regular.ttf);
+    font-family: 'dm_monomedium';
+    src: url(https://raw.githubusercontent.com/funinkina/funinkina.github.io/master/DMMono-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+
 }
+
 @font-face {
-    font-family: "DM-mono-bold";
-    src: url(DMMono-Medium.ttf);
+    font-family: 'dm_monoregular';
+    src: url(https://raw.githubusercontent.com/funinkina/funinkina.github.io/master/DMMono-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+
 }
 div.header {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    font-family: "DM-mono-bold";
+    font-family: 'dm_monomedium';
     font-size: 7vw;
     position: static;
     line-height: 0vi;
@@ -26,7 +33,7 @@ hr {
 ul {
     list-style-type: none;
     display: flex;
-    font-family: "DM-mono";
+    font-family: 'dm_monoregular';
     justify-content: center;
     font-size: 1.5vmax;
     margin-left: 1vw;
@@ -69,7 +76,7 @@ div.abme{
     border-right: 0.5vmin solid black;
     width: 60vw;
     height: 25vw;
-    font-family: "DM-mono";
+    font-family: 'dm_monoregular';
     font-size: calc(20px + 0.390625vh);
     padding-left: 2vw;
     padding-right: 2vw;
@@ -80,7 +87,7 @@ div.abme{
 @media (max-width: 768px) {
     ul {
         display: list-item;
-        font-family: "DM-mono";
+        font-family: 'dm_monoregular';
         justify-content: center;
         font-size: 2.5vmax;
     }
@@ -124,7 +131,7 @@ div.abme{
         border-top: 0;
         width: 80vw;
         height: auto;
-        font-size: calc(14px + 0.390625vw);
+        font-size: calc(19px + 0.390625vw);
         margin-right: 5vmin;
         margin-left: 5vmin;
         margin-top: -2%;

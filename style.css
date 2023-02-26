@@ -18,7 +18,9 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-
+}
+body:hover{
+    cursor:default;
 }
 div.header {
     display: inline-block;
@@ -69,7 +71,10 @@ ul {
     color: black;
     text-decoration: none;
 }
-
+.links li a{
+    display: flex;
+    align-items: center;
+}
 li {
     display: flex;
     align-items: center;

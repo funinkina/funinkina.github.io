@@ -90,7 +90,7 @@ li {
 li.underline:hover::before{
     content: "";
     position: absolute;
-    width: 100%;
+    width: 105%;
     height: 2px;
     bottom: 0;
     left: 0;
@@ -110,10 +110,6 @@ li.underline::before {
 li:visited{
     color: black;
     text-decoration: none;
-}
-  
-li.underline:hover::before {
-    width: 100%;
 }
 img.profile{
     border: 0.5vmin solid black;
@@ -258,6 +254,7 @@ footer{
         border: 0.5vmin solid black;
         width: 84vw;
         height: auto;
+        margin-top: 5vh;
         margin-right: 5vmin;
         margin-left: 5vmin;
         margin-bottom: 0;
@@ -288,7 +285,7 @@ footer{
         height: auto;
         font-size: calc(19px + 0.390625vw);
         margin-right: 5vmin;
-        margin-left: 7.55vmin;
+        margin-left: 6.2vmin;
         margin-top: -2%;
         margin-bottom: 0;
     }
@@ -315,7 +312,6 @@ footer{
         border: 0.5vmin solid black;
         width: 84vw;
         height: 10vh;
-
     }
     ul.sklist{
         margin-top: 0;

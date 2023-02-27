@@ -26,7 +26,7 @@ div.header {
     display: inline-block;
     justify-content: center;
     align-items: flex-start;
-    font-family: 'dm_monomedium';
+    font-family: 'dm_monomedium', monospace;
     font-size: 7vw;
     position: static;
     line-height: 0vi;
@@ -55,7 +55,7 @@ hr {
 ul {
     list-style-type: none;
     display: flex;
-    font-family: 'dm_monoregular';
+    font-family: 'dm_monoregular', monospace;
     justify-content: center;
     font-size: 1.5vmax;
     margin-left: 1vw;
@@ -169,7 +169,7 @@ div.abme{
     border-right: 0.5vmin solid black;
     width: 60vw;
     height: 25vw;
-    font-family: 'dm_monoregular';
+    font-family: 'dm_monoregular', monospace;
     font-size: calc(23px + 0.390625vh);
     padding-left: 2vw;
     padding-right: 2vw;
@@ -198,7 +198,7 @@ div.skill{
     writing-mode:vertical-lr;
     transform: rotate(180deg);
     font-size: 2.5vmax;
-    font-family: 'dm_monomedium';
+    font-family: 'dm_monomedium', monospace;
     border: 0.5vmin solid black;
     width: auto;
     margin-left: 5.3vmax;
@@ -213,7 +213,7 @@ ul.sklist{
     grid-template-columns: auto auto auto;
     border: 0.5vmin solid black;
     border-left: 0;
-    font-family: 'dm_monoregular';
+    font-family: 'dm_monoregular', monospace;
     font-size: calc(30px + 0.39vh);
     padding-left: 2vw;
     padding-right: 2vw;
@@ -227,13 +227,13 @@ footer{
     position: relative;
     bottom: 0px;
     width: 100%;
-    font-family: 'dm_monoregular';
+    font-family: 'dm_monoregular', monospace;
     margin-top: 5vh;
 }
 @media (max-width: 768px) {
     ul {
         display: list-item;
-        font-family: 'dm_monoregular';
+        font-family: 'dm_monoregular', monospace;
         justify-content: center;
         font-size: 2.5vmax;
     }
@@ -311,7 +311,7 @@ footer{
         writing-mode: horizontal-tb;
         transform: rotate(0deg);
         font-size: 2.8vmax;
-        font-family: 'dm_monomedium';
+        font-family: 'dm_monomedium', monospace;
         border: 0.5vmin solid black;
         width: 84vw;
         height: 10vh;
@@ -330,7 +330,7 @@ footer{
         grid-template-columns: auto auto auto;
         border: 0.5vmin solid black;
         border-top: 0;
-        font-family: 'dm_monoregular';
+        font-family: 'dm_monoregular', monospace;
         font-size: calc(20px + 0.39vh);
         padding-left: 1vw;
         padding-right: 1vw;

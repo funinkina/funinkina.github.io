@@ -3,17 +3,6 @@
     --violet: rgb(103, 58, 183);
     --pink: rgb(244, 143, 177);
 }
-@font-face {
-    font-family: 'dm_monomedium';
-    src: url(https://raw.githubusercontent.com/funinkina/funinkina.github.io/master/DMMono-Medium.ttf);
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'dm_monoregular';
-    src: url(https://raw.githubusercontent.com/funinkina/funinkina.github.io/master/DMMono-Regular.ttf);
-    font-weight: normal;
-}
 body{
     margin: 0;
     justify-content: center;
@@ -27,7 +16,8 @@ div.header {
     display: inline-block;
     justify-content: center;
     align-items: flex-start;
-    font-family: 'dm_monomedium', monospace;
+    font-family: 'DM Mono', monospace;
+    font-weight: bold;
     font-size: 7vw;
     position: static;
     line-height: 0vi;
@@ -55,7 +45,7 @@ hr {
 ul {
     list-style-type: none;
     display: flex;
-    font-family: 'dm_monoregular', monospace;
+    font-family: 'DM Mono', monospace;
     justify-content: center;
     font-size: 1.5vmax;
     margin-left: 1vw;
@@ -165,7 +155,7 @@ div.abme{
     border-right: 0.5vmin solid black;
     width: 60vw;
     height: 25vw;
-    font-family: 'dm_monoregular', monospace;
+    font-family: 'DM Mono', monospace;
     font-size: calc(23px + 0.390625vh);
     padding-left: 2vw;
     padding-right: 2vw;
@@ -194,7 +184,7 @@ div.skill{
     writing-mode:vertical-lr;
     transform: rotate(180deg);
     font-size: 2.5vmax;
-    font-family: 'dm_monomedium', monospace;
+    font-family: 'DM Mono', monospace;
     border: 0.5vmin solid black;
     width: auto;
     margin-left: 5vmax;
@@ -209,7 +199,7 @@ ul.sklist{
     grid-template-columns: auto auto auto;
     border: 0.5vmin solid black;
     border-left: 0;
-    font-family: 'dm_monoregular', monospace;
+    font-family: 'DM Mono', monospace;
     font-size: calc(30px + 0.39vh);
     padding-left: 2vw;
     padding-right: 2vw;
@@ -223,17 +213,18 @@ footer{
     position: relative;
     bottom: 0px;
     width: 100%;
-    font-family: 'dm_monoregular', monospace;
+    font-family: 'DM Mono', monospace;
     margin-top: 10vmax;
 }
 
 .recent{
     margin-top: 3vmax;
     margin-left: 5vmax;
-    margin-right: 5vmax;
+    margin-right: 5.2vmax;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1;
+    text-align: center;
 }
 .rectext{
     display: inline;
@@ -241,18 +232,21 @@ footer{
     text-align: center;
     border: 0.5vmin solid black;
     border-right: 0;
-    font-family: 'dm_monoregular', monospace;
+    font-family: 'DM Mono', monospace;
     font-size: 5vmax;
     padding-left: 1vmax;
     padding-right: 1vmax;
 }
 .instagram{
+    display: flex;
     border: 0.5vmin solid black;
+    justify-content: center;
+    justify-items: center;
 }
 .fancy {
-    font-family: 'dm_monomedium', monospace;
+    font-weight: bolder;
     display: inline-block;
-    font-size: 1.8em;
+    font-size: 15vmax;
     font-style: bold;
     background: linear-gradient(
         to right,
@@ -281,7 +275,7 @@ footer{
 @media (max-width: 768px) {
     ul {
         display: list-item;
-        font-family: 'dm_monoregular', monospace;
+        font-family: 'DM Mono', monospace;
         justify-content: center;
         font-size: 2.5vmax;
     }
@@ -360,7 +354,7 @@ footer{
         writing-mode: horizontal-tb;
         transform: rotate(0deg);
         font-size: 2.8vmax;
-        font-family: 'dm_monomedium', monospace;
+        font-family: 'DM Mono', monospace;
         border: 0.5vmin solid black;
         width: 84vw;
         height: 10vh;
@@ -378,7 +372,7 @@ footer{
         grid-template-columns: auto auto auto;
         border: 0.5vmin solid black;
         border-top: 0;
-        font-family: 'dm_monoregular', monospace;
+        font-family: 'DM Mono', monospace;
         font-size: calc(20px + 0.39vh);
         padding-left: 1vw;
         padding-right: 1vw;
@@ -389,6 +383,15 @@ footer{
     }
     #pseudo{
         display: none;
+    }
+}
+
+@media (max-width: 1460px){
+    div.abme{
+        font-size: calc(15px + 0.390625vh);
+    }
+    ul.sklist{
+        font-size: calc(15px + 0.390625vh);
     }
     .recent{
         margin-top: 3vmax;
@@ -405,14 +408,8 @@ footer{
         padding-left: 1vmin;
         padding-right: 1vmin;
     }
-}
-
-@media (max-width: 1460px){
-    div.abme{
-        font-size: calc(15px + 0.390625vh);
-    }
-    ul.sklist{
-        font-size: calc(15px + 0.390625vh);
+    .fancy{
+        font-size: 13vmax;
     }
 }
 

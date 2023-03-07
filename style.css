@@ -267,14 +267,12 @@ ul.sklist{
 }
 footer{
     display: inline-block;
-    justify-content: center;
     text-align: center;
     align-self: center;
-    position: relative;
+    position:relative;
     bottom: -100px;
     width: 100%;
     font-family: 'DM Mono', monospace;
-    margin-top: 8vh;
     background-color: black;
     color: white;
     z-index: 1;
@@ -349,7 +347,7 @@ footer{
     border: 0.5vmin solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row: auto auto auto;
+    grid-row: auto auto auto auto;
     width: 90vw;
 }
 .git-stat{
@@ -357,6 +355,10 @@ footer{
     font-size: 5vw;
     background-color: black;
     color: white;
+}
+.calendar{
+    grid-column: span 2;
+    grid-row: 2;
 }
 .git-profile{
     display: flex;
@@ -385,7 +387,7 @@ footer{
     margin-bottom: 0;
 }
 .git-info{
-    grid-row: 2;
+    grid-row: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -393,8 +395,8 @@ footer{
     padding: 5px;
     background-color: #0d1117;
 }
-.repo{
-    scale: 1.6;
+.github-pinner.gp-repo {
+  width: 30vw;
 }
 .otherrepo{
     display: flex;
@@ -407,6 +409,9 @@ footer{
     padding: 5px;
     font-family: 'DM Mono', monospace;
     font-size: 5vw;
+}
+.github-pinner.gp-all{
+    width: auto;
 }
 .listrepo{
     background-color: #0d1117;
@@ -662,7 +667,7 @@ footer{
         align-self: center;
         justify-content: center;
         border: 0.5vmin solid black;
-        width: 84vw;
+        width: 84svw;
         height: auto;
         margin-top: 5vw;
         margin-left: 0vmax;
@@ -689,7 +694,7 @@ footer{
         grid-column: 1 / -1;
         border: 0.5vmin solid black;
         border-top: 0;
-        width: 80vw;
+        width: 80svw;
         height: auto;
         font-size: calc(19px + 0.390625vw);
         margin-left: 5vmax;
@@ -711,12 +716,12 @@ footer{
         width: 100%;
         height: 10vh;
         grid-row: 1;
-        min-width: 85vw
+        min-width: 85svw
     }
     ul.sklist{
         margin-top: 0;
         box-sizing: border-box;
-        width: 85vw;
+        width: 85svw;
         height: auto;
         border: 0;
         display:flex;
@@ -730,14 +735,14 @@ footer{
         display: none;
     }
     .github{
-        width: 85vw;
+        width: 85svw;
         margin-top: 10vmin;
         margin-left: 5vmin;
         margin-right: 5vmin;
         border: 0.5vmin solid black;
         display: grid;
         grid-template-columns: 85vw;
-        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
         overflow: hidden;
     }
     .git-stat{
@@ -748,9 +753,20 @@ footer{
     .git-profile{
         display: flex;
         grid-row-start: 2;
-        grid-row-end: 3;
         grid-column: 1;
         height: fit-content;
+    }
+    .github-pinner #gp-container-profile .gp-follow{
+        float: none;
+        margin-top: 10px;
+        margin-left: 10px;
+        position: static;
+    }
+    .github-pinner #gp-container-profile > .gp-stats .gp-stat{
+        margin-bottom: 15px;
+    }
+    .calendar{
+        grid-row-start: 3;
     }
     .git-info{
         display: flex;
@@ -761,8 +777,11 @@ footer{
         margin: 0;
         height: 12vh;
         min-height: 25vh;
-        grid-row-start: 4;
+        grid-row-start: 5;
         grid-column: 1;
+    }
+    .github-pinner.gp-repo {
+        width: 70vw;
     }
     .gitext{
         display: flex;
@@ -775,7 +794,7 @@ footer{
         margin: 0;
         padding: 0;
         grid-column: 1;
-        grid-row-start: 3;
+        grid-row-start: 4;
 
     }
     .otherrepo{
@@ -785,7 +804,10 @@ footer{
         align-content: center;
         font-size: 6vw;
         grid-column: 1;
-        grid-row-start: 5;
+        grid-row-start: 6;
+    }
+    .listrepo{
+        grid-row-start: 7;
     }
     .glitch-noise{
         font-size: 13vw;

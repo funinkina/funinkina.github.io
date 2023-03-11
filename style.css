@@ -11,22 +11,17 @@ body:hover{
     cursor:default;
 }
 .header {
-    display: inline-block;
-    justify-content: center;
-    align-items: flex-start;
     font-family: 'DM Mono', monospace;
     font-weight: bold;
-    font-size: 7vw;
+    font-size: 8svw;
     position: static;
     line-height: 0vi;
-    margin-top: 0%;
-    margin-bottom: 0%;
+    margin-top: 0;
+    margin-bottom: 0;
     overflow: hidden;
     white-space: nowrap;
-    width: 0;
     color: black;
-    animation:
-    typing 2.5s steps(16, end);
+    animation: typing 2.5s steps(16, end);
     animation-fill-mode: forwards;
 }
 @keyframes typing {
@@ -48,7 +43,7 @@ ul.links {
     font-size: 1.5vmax;
     background-color: black;
     color: white;
-    height: 12vh;
+    height: 12vmin;
     margin: 0;
     padding: 0;
 }
@@ -111,11 +106,11 @@ img.logos{
 }
 img.logos, li.grow:hover{
     transform: scale(1.2);
-    transition: 0.3s ease-in-out;
+    transition: 0.3s cubic-bezier(.68,-0.55,.27,1.55);;
 }
 img.logos, li.grow{
     transform: scale(1);
-    transition: 0.2s ease-in-out;
+    transition: 0.2s cubic-bezier(.68,-0.55,.27,1.55);;
 }
 img.linklogo{
     filter: invert(1);
@@ -164,11 +159,11 @@ div.abme{
 
 div.skills{ 
     align-items: center;
-    margin-top: 5vh;
     display: grid;
+    margin-top: 2vmax;
     grid-template-columns: 1.5fr 0.5fr;
     margin-right: 5vmax;
-    margin-left: 5vmax;
+    margin-left: 4.5vmax;
     gap: 0;
 }
 div.skill{
@@ -246,21 +241,21 @@ li.grow{
         -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%); 
 } 
 }
-.skilllist{
-    grid-column: 1;
-}
 ul.sklist{
-    box-sizing: border-box;
-    height: 45vh;
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     border: 0.5vmin solid black;
     border-right: 0;
     font-family: 'DM Mono', monospace;
-    font-size: calc(30px + 0.39vh);
+    font-size: calc(25px + 0.39vh);
     text-align: center;
     float: right;
     padding: 5px;
+    height: 43vh;
+}
+.sklist > * {
+    flex: 1;
 }
 .last{
     grid-column: 1 / 4;
@@ -348,7 +343,8 @@ footer{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row: auto auto auto auto;
-    width: 90vw;
+    width: 85vw;
+    overflow: hidden;
 }
 .git-stat{
     font-family: 'DM Mono', monospace;
@@ -369,6 +365,10 @@ footer{
     height: auto;
     padding: 1vmax;
 }
+.github-pinner.gp-profile {
+    width: auto;
+    height: auto;
+  }
 .gitext{
     border-left: 0.5vmin black solid;
     background-color: black;
@@ -702,9 +702,17 @@ footer{
         margin-bottom: 0;
     }
     div.skills{
-        border: 0.5vmin solid black;
         margin-top: 0;
         grid-template-columns: 1fr;
+        gap: 0;
+    }
+    ul.sklist{
+        font-size: calc(15px + 0.390625vh);
+        border-top: 0;
+        border-right: 0.5vmin solid black;
+        margin: 0;
+        height: fit-content;
+        max-width: 82.5vw;
     }
     div.skill{
         flex-shrink: 0;
@@ -714,25 +722,10 @@ footer{
         font-size: 7vw;
         background-color: black;
         width: 100%;
-        height: 10vh;
         grid-row: 1;
-        min-width: 85svw
-    }
-    ul.sklist{
-        margin-top: 0;
-        box-sizing: border-box;
-        width: 85svw;
-        height: auto;
-        border: 0;
-        display:flex;
-        flex-direction: column;
-        border-top: 0;
-        font-size: calc(20px + 0.39vh);
-        padding-top: 1.5vh;
-        margin: 0;
-    }
-    #pseudo{
-        display: none;
+        min-width: 85svw;
+        height: fit-content;
+        
     }
     .github{
         width: 85svw;
@@ -767,6 +760,7 @@ footer{
     }
     .calendar{
         grid-row-start: 3;
+        max-height: 5vh;
     }
     .git-info{
         display: flex;
@@ -816,9 +810,6 @@ footer{
 
 @media (max-width: 1300px){
     div.abme{
-        font-size: calc(15px + 0.390625vh);
-    }
-    ul.sklist{
         font-size: calc(15px + 0.390625vh);
     }
     .recent{

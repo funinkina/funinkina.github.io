@@ -13,21 +13,24 @@ body:hover{
 .header {
     font-family: 'DM Mono', monospace;
     font-weight: bold;
-    font-size: 17svw;
+    font-size: 17vw;
     position: static;
     letter-spacing: 0;
     margin-top: -2%;
     margin-bottom: 0;
     overflow: hidden;
     color: white;
+    background-color: black;
     width: 100vw;
     transition: all 0.4s cubic-bezier(.17,.84,.44,1);
 }
 .header:hover{
     width: 100vw;
-    font-size: 14svw;
+    font-size: 14vw;
     letter-spacing: 0.18em;
     font-weight: 500;
+    color: #000000;
+    background-color: white;
 }
 nav{
     position: sticky;
@@ -94,8 +97,7 @@ li:visited{
     text-decoration: none;
 }
 img.profile{
-    border: 0.5vmin solid black;
-    margin-left: 5vmax;
+    border: 2px solid black;
     width: auto;
     height: 25vw;
     margin-right: 0;
@@ -138,14 +140,14 @@ div.about{
   }
 div.image{
     grid-column: 1 / 2;
+    margin-left: 4.8vmax;
 }
 div.abme{
     display:inline-flex;
     text-align: justify;
     align-items: center;
-    border-top: 0.5vmin solid black;
-    border-bottom: 0.5vmin solid black;
-    border-right: 0.5vmin solid black;
+    border: 2px solid black;
+    border-left: 0;
     width: 60vw;
     height: 25vw;
     font-family: 'DM Sans', sans-serif;
@@ -154,8 +156,15 @@ div.abme{
     padding-right: 2vw;
     grid-column: 2 / -1;
     margin-right: 5vmax;
-    margin-left: -1%;
     overflow: hidden;
+}
+.animated-text{
+    transition: all 0.3s ease-in-out;
+}
+.animated-text:hover{
+    background-color: #000000;
+    color: white;
+    letter-spacing: 2px;
 }
 div.skills{ 
     align-items: center;
@@ -176,14 +185,14 @@ div.skill{
     font-size: 3vmax;
     font-family: 'DM Mono', monospace;
     background-color: black; 
-    border: 0.5vmin solid black;
+    border: 2px solid black;
     max-width: 30vw;
     height: 45vh;
     white-space: nowrap;
     color: white;
 }
 .gallery{
-    border: 0.5vmin solid black;
+    border: 2px solid black;
     border-top: 0;
     grid-row: 2 / 2;
     grid-column: 1 / 3;
@@ -193,25 +202,24 @@ div.skill{
     overflow: hidden;
 }
 .column{
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     margin-top: 5px;
     margin-bottom: 5px;
     flex: 24%;
     max-width: 25%;
-    padding: 0 4px;
+    padding: 0;
     align-items: center;
     overflow: hidden;
+    height: 90vh;
 }
-img.last{
-    height: 120px;
+.column > *{
+    flex: 1;
     object-fit: cover;
 }
 .column img{
     display: block;
     overflow: hidden;
-    margin-top: 3px;
-    margin-bottom: 3px;
     width: 100%;
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -244,14 +252,14 @@ li.grow{
 ul.sklist{
     display: flex;
     flex-wrap: wrap;
-    border: 0.5vmin solid black;
+    border: 2px solid black;
     border-right: 0;
     font-family: 'DM Sans', sans-serif;
     font-size: calc(25px + 0.39vh);
     text-align: center;
     float: right;
     padding: 5px;
-    height: 43vh;
+    height: 43.6vh;
 }
 .sklist > * {
     flex: 1;
@@ -288,7 +296,7 @@ footer{
     text-align: center;
     background-color: black;
     color: white;
-    border: 0.5vmin solid black;
+    border: 2px solid black;
     border-right: 0;
     font-family: 'DM Sans', sans-serif;
     font-size: 5vmax;
@@ -301,7 +309,7 @@ footer{
 .instagram{
     padding-top: 7px;
     display: flex;
-    border: 0.5vmin solid black;
+    border: 2px solid black;
     justify-content: center;
     align-items: center;
 }
@@ -324,7 +332,8 @@ footer{
     color: transparent;
     background-size: 200%;
     animation: background-pan 3s linear infinite;
-    margin: 0;
+    margin-top: -1%;
+    margin-bottom: -1%;
 }
 @keyframes background-pan {
     from{
@@ -338,7 +347,7 @@ footer{
     margin-top: 10vmin;
     margin-left: 5vmax;
     margin-right: 5vmax;
-    border: 0.5vmin solid black;
+    border: 2px solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row: auto auto auto auto;
@@ -369,7 +378,7 @@ footer{
     height: auto;
   }
 .gitext{
-    border-left: 0.5vmin black solid;
+    border-left: 2px black solid;
     background-color: black;
     color: white;
     display: flex;
@@ -403,8 +412,8 @@ footer{
     justify-content: center;
     color: white;
     background-color: black;
-    border-right: 0.5vmin black solid;
-    border-top: 0.5vmin black solid;
+    border-right: 2px black solid;
+    border-top: 2px black solid;
     padding: 5px;
     font-family: 'DM Sans', sans-serif;
     font-size: 5vw;
@@ -669,7 +678,6 @@ footer{
         align-content: center;
         align-self: center;
         justify-content: center;
-        border: 0.5vmin solid black;
         width: 84svw;
         height: auto;
         margin-top: 5vw;
@@ -695,8 +703,8 @@ footer{
     div.abme {
         align-items: center;
         grid-column: 1 / -1;
-        border: 0.5vmin solid black;
         border-top: 0;
+        border-left: 2px solid black;
         width: 80svw;
         height: auto;
         font-size: calc(19px + 0.390625vw);
@@ -712,7 +720,7 @@ footer{
     ul.sklist{
         font-size: calc(20px + 0.390625vh);
         border-top: 0;
-        border-right: 0.5vmin solid black;
+        border-right: 2px solid black;
         margin: 0;
         height: fit-content;
         max-width: 82.5vw;
@@ -734,7 +742,6 @@ footer{
         margin-top: 10vmin;
         margin-left: 5vmin;
         margin-right: 5vmin;
-        border: 0.5vmin solid black;
         display: grid;
         grid-template-columns: 85vw;
         grid-template-rows: auto auto auto auto auto auto auto;
@@ -824,7 +831,6 @@ footer{
         grid-template-rows: 1 1 1;
     }
     .rectext{
-        border: 0.5vmin solid black;
         border-bottom: 0;
         font-size: 5vmin;
         grid-column: 1 / -1;
@@ -835,7 +841,7 @@ footer{
     .gallery {
         display: flex;
         grid-row: 3;
-        padding: 0;
+        padding: 3px;
     }
     .instagram{
         width: inherit;
@@ -846,14 +852,11 @@ footer{
     .column{
         display: flex;
         flex-direction: column;
-        flex: 48%;
-        max-width: 48%;
-        padding: 2px;
+        flex: 50%;
+        max-width: 50%;
         align-items: center;
         width: 100%;
-    }
-    img.last{
-        display: none;
+        margin: 0;
     }
 }
 

@@ -13,20 +13,21 @@ body:hover{
 .header {
     font-family: 'DM Mono', monospace;
     font-weight: bold;
-    font-size: 8svw;
+    font-size: 17svw;
     position: static;
-    line-height: 0vi;
-    margin-top: 0;
+    letter-spacing: 0;
+    margin-top: -2%;
     margin-bottom: 0;
     overflow: hidden;
-    white-space: nowrap;
-    color: black;
-    animation: typing 2.5s steps(16, end);
-    animation-fill-mode: forwards;
+    color: white;
+    width: 100vw;
+    transition: all 0.4s cubic-bezier(.17,.84,.44,1);
 }
-@keyframes typing {
-    from{width: 0;}
-    to{width: 100%;}
+.header:hover{
+    width: 100vw;
+    font-size: 14svw;
+    letter-spacing: 0.18em;
+    font-weight: 500;
 }
 nav{
     position: sticky;
@@ -40,10 +41,10 @@ ul.links {
     display: flex;
     font-family: 'DM Mono', monospace;
     justify-content: center;
-    font-size: 1.5vmax;
+    font-size: 1.6vmax;
     background-color: black;
     color: white;
-    height: 12vmin;
+    height: 10vmin;
     margin: 0;
     padding: 0;
 }
@@ -63,10 +64,10 @@ li.underline {
     display: flex;
     text-align:center;
     list-style:none;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 3.5vw;
+    margin-right: 3.5vw;
     position: relative;
 }
 li.underline:hover::before{
@@ -147,8 +148,8 @@ div.abme{
     border-right: 0.5vmin solid black;
     width: 60vw;
     height: 25vw;
-    font-family: 'DM Mono', monospace;
-    font-size: 1.6vw;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.8vw;
     padding-left: 2vw;
     padding-right: 2vw;
     grid-column: 2 / -1;
@@ -156,7 +157,6 @@ div.abme{
     margin-left: -1%;
     overflow: hidden;
 }
-
 div.skills{ 
     align-items: center;
     display: grid;
@@ -244,10 +244,9 @@ li.grow{
 ul.sklist{
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
     border: 0.5vmin solid black;
     border-right: 0;
-    font-family: 'DM Mono', monospace;
+    font-family: 'DM Sans', sans-serif;
     font-size: calc(25px + 0.39vh);
     text-align: center;
     float: right;
@@ -267,7 +266,7 @@ footer{
     position:relative;
     bottom: -100px;
     width: 100%;
-    font-family: 'DM Mono', monospace;
+    font-family: 'DM Sans', sans-serif;
     background-color: black;
     color: white;
     z-index: 1;
@@ -291,7 +290,7 @@ footer{
     color: white;
     border: 0.5vmin solid black;
     border-right: 0;
-    font-family: 'DM Mono', monospace;
+    font-family: 'DM Sans', sans-serif;
     font-size: 5vmax;
     padding-left: 1vmax;
     padding-right: 1vmax;
@@ -308,9 +307,9 @@ footer{
 }
 .fancy {
     font-weight: bolder;
+    font-family: 'DM Mono', monospace;
     display: inline-block;
-    font-size: 13vmax;
-    font-weight: bold;
+    font-size: 12.5vmax;
     background: linear-gradient(
         to right,
         rgb(123, 31, 162),
@@ -347,7 +346,7 @@ footer{
     overflow: hidden;
 }
 .git-stat{
-    font-family: 'DM Mono', monospace;
+    font-family: 'DM Sans', sans-serif;
     font-size: 5vw;
     background-color: black;
     color: white;
@@ -379,7 +378,7 @@ footer{
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-family: 'DM Mono', monospace;
+    font-family: 'DM Sans', sans-serif;
     font-size: 5vw;
     padding-left: 7vmin;
     padding-right: 7vmin;
@@ -407,7 +406,7 @@ footer{
     border-right: 0.5vmin black solid;
     border-top: 0.5vmin black solid;
     padding: 5px;
-    font-family: 'DM Mono', monospace;
+    font-family: 'DM Sans', sans-serif;
     font-size: 5vw;
 }
 .github-pinner.gp-all{
@@ -626,17 +625,21 @@ footer{
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     ul.links {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        font-family: 'DM Mono', monospace;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        align-items: center;
         justify-content: center;
         font-size: 2.5vmax;
         height: auto;
         padding-top: 1vw;
         padding-bottom: 1vw;
-        margin-bottom: 0.1vw;
+        margin-bottom: 0.5vw;
+    }
+    ul.links > *{
+        flex: 1;
     }
     .extra{
         grid-column: 1 / -1;
@@ -707,7 +710,7 @@ footer{
         gap: 0;
     }
     ul.sklist{
-        font-size: calc(15px + 0.390625vh);
+        font-size: calc(20px + 0.390625vh);
         border-top: 0;
         border-right: 0.5vmin solid black;
         margin: 0;
@@ -715,7 +718,6 @@ footer{
         max-width: 82.5vw;
     }
     div.skill{
-        flex-shrink: 0;
         grid-column: 1;
         justify-content: center;
         align-items: center;
@@ -810,7 +812,7 @@ footer{
 
 @media (max-width: 1300px){
     div.abme{
-        font-size: calc(15px + 0.390625vh);
+        font-size: calc(18px + 0.390625vh);
     }
     .recent{
         margin-top: 3vmax;
@@ -868,8 +870,4 @@ footer{
         height: auto;
         padding-right: 1.5vw;
     }
-    ul.sklist{
-        font-size: calc(18px + 0.390625vh);
-    }
-    
 }

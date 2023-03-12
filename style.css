@@ -69,8 +69,8 @@ li.underline {
     list-style:none;
     margin-top: 3vh;
     margin-bottom: 3vh;
-    margin-left: 3.5vw;
-    margin-right: 3.5vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
     position: relative;
 }
 li.underline:hover::before{
@@ -137,7 +137,7 @@ div.about{
     to {
       bottom: 0;
     }
-  }
+}
 div.image{
     grid-column: 1 / 2;
     margin-left: 4.8vmax;
@@ -159,12 +159,14 @@ div.abme{
     overflow: hidden;
 }
 .animated-text{
+    font-weight: bold;
+    text-decoration: underline dotted;
     transition: all 0.3s ease-in-out;
 }
 .animated-text:hover{
     background-color: #000000;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 div.skills{ 
     align-items: center;
@@ -355,10 +357,23 @@ footer{
     overflow: hidden;
 }
 .git-stat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-family: 'DM Sans', sans-serif;
     font-size: 5vw;
     background-color: black;
     color: white;
+}
+.git-stat > h4{
+    margin: 0;
+}
+.gitlogo{
+    width: 7vmax;
+    height: fit-content;
+    filter: invert(1);
+    padding: 30px;
 }
 .calendar{
     grid-column: span 2;
@@ -376,7 +391,7 @@ footer{
 .github-pinner.gp-profile {
     width: auto;
     height: auto;
-  }
+}
 .gitext{
     border-left: 2px black solid;
     background-color: black;
@@ -725,6 +740,9 @@ footer{
         margin: 0;
         height: fit-content;
         max-width: 82.5vw;
+    }
+    li.grow{
+        margin: 10px;
     }
     div.skill{
         grid-column: 1;

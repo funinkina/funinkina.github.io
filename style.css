@@ -214,10 +214,12 @@ div.skill{
     align-items: center;
     overflow: hidden;
     height: 90vh;
+    border: 1px solid rgb(255, 255, 255);
 }
 .column > *{
     flex: 1;
     object-fit: cover;
+    border: 1px solid rgb(255, 255, 255);
 }
 .column img{
     display: block;
@@ -363,8 +365,8 @@ footer{
     align-items: center;
     font-family: 'DM Sans', sans-serif;
     font-size: 5vw;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #fff;
 }
 .git-stat > h4{
     margin: 0;
@@ -372,8 +374,8 @@ footer{
 .gitlogo{
     width: 7vmax;
     height: fit-content;
-    filter: invert(1);
     padding: 30px;
+    filter: invert(1);
 }
 .calendar{
     grid-column: span 2;
@@ -383,10 +385,11 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0d1117;
+    background-color: white;
     grid-column: 2;
     height: auto;
     padding: 1vmax;
+    border-bottom: 2px solid black;
 }
 .github-pinner.gp-profile {
     width: auto;
@@ -416,7 +419,8 @@ footer{
     justify-content: center;
     align-items: center;
     padding: 5px;
-    background-color: #0d1117;
+    background-color: white;
+    border-top: 2px solid black;
 }
 .github-pinner.gp-repo {
   width: 30vw;
@@ -437,7 +441,7 @@ footer{
     width: auto;
 }
 .listrepo{
-    background-color: #0d1117;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -766,10 +770,14 @@ footer{
         grid-template-rows: auto auto auto auto auto auto auto;
         overflow: hidden;
     }
+    .gitlogo{
+        padding: 10px;
+    }
     .git-stat{
         grid-row-start: 1;
         grid-row-end: 2;
         grid-column: span 1;
+        font-size: 10vw;
     }
     .git-profile{
         display: flex;
@@ -797,8 +805,6 @@ footer{
         width: 100%;
         justify-content: center;
         margin: 0;
-        height: 12vh;
-        min-height: 25vh;
         grid-row-start: 5;
         grid-column: 1;
     }
@@ -863,7 +869,7 @@ footer{
         padding: 3px;
     }
     .instagram{
-        width: inherit;
+        width: 85vw;
     }
     .fancy{
         font-size: 15vmin;

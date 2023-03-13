@@ -43,7 +43,7 @@ ul.links {
     list-style-type: none;
     display: flex;
     font-family: 'DM Mono', monospace;
-    justify-content: center;
+    justify-content:space-evenly;
     font-size: 1.6vmax;
     background-color: black;
     color: white;
@@ -53,10 +53,6 @@ ul.links {
 }
 .links a:visited, a:link{
     color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-.links{
-    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 .links li a{
@@ -103,13 +99,13 @@ img.profile{
     margin-right: 0;
 }
 img.logos{
-    width: 2vmax;
+    width: 2.5vmax;
     height: auto;
     padding-right: 0.5vw;
 }
 img.logos, li.grow:hover{
     transform: scale(1.2);
-    transition: 0.3s cubic-bezier(.68,-0.55,.27,1.55);;
+    transition: 0.3s cubic-bezier(.17,.84,.44,1);
 }
 img.logos, li.grow{
     transform: scale(1);
@@ -214,12 +210,10 @@ div.skill{
     align-items: center;
     overflow: hidden;
     height: 90vh;
-    border: 1px solid rgb(255, 255, 255);
 }
 .column > *{
     flex: 1;
     object-fit: cover;
-    border: 1px solid rgb(255, 255, 255);
 }
 .column img{
     display: block;
@@ -743,7 +737,7 @@ footer{
         border-right: 2px solid black;
         margin: 0;
         height: fit-content;
-        max-width: 82.5vw;
+        max-width: 83vw;
     }
     li.grow{
         margin: 10px;
@@ -807,6 +801,9 @@ footer{
         margin: 0;
         grid-row-start: 5;
         grid-column: 1;
+    }
+    .repo-card{
+        margin: 5px;
     }
     .github-pinner.gp-repo {
         width: 70vw;
